@@ -10,8 +10,8 @@
 # Company portal
 added the React App
 
-`
+```
 cd company_portal/client
 
 yarn start
-`
+```
