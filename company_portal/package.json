@@ -1,0 +1,25 @@
+{
+    "name": "company_portal",
+    "description": "This is a portal for admin users to get to their company pages",
+    "main": "server.js",
+    "scripts": {
+        "client": "cd client && yarn start",
+        "server": "nodemon --exec babel-node server.js",
+        "build": "cd client && yarn build"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "concurrently": "^5.0.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-validator": "^6.3.0",
+        "mongoose": "^5.7.12",
+        "request": "^2.88.0"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "eslint": "^6.7.1",
+        "mocha": "^6.2.2",
+        "nodemon": "^2.0.1"
+    }
+}
