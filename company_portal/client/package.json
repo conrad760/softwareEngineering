@@ -2,6 +2,7 @@
   "name": "company_portal",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.2.4",
