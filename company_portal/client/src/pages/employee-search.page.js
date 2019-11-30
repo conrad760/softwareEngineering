@@ -5,11 +5,14 @@ import '../App.css';
 import { SearchBox } from '../components/search-box/search-box.component';
 
 class EmployeeSearch extends Component {
+
+    
     state = {
         employees: [],
         title: '',
         searchField: ''
     };
+
     // put this on the page
     componentDidMount() {
         fetch('https://jsonplaceholder.typicode.com/users')

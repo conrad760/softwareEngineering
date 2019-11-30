@@ -6,6 +6,7 @@ import EmployeeSearch from './pages/employee-search.page';
 
 
 const App = () => {
+
     return (
         <Router>
             <Route path='/cat-employees' component={EmployeeSearch} />

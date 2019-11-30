@@ -1,6 +1,6 @@
 import { genSalt, hash } from 'bcryptjs';
 import { Router } from 'express';
-import Admin from '../../Admin';
+import Admin from '../../middleware/admin';
 
 const router = Router();
 
