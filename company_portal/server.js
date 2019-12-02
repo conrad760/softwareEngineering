@@ -1,25 +1,19 @@
-// const express = require('express');
-// const connectDB = require('../../../../../Summer_2019/SoftwareDev/SoftwareDesign/assignment2/config/db');
+const express = require('express');
+// const connectDB = require('./config/db');
 
-// const app = express();
+const app = express();
 
-// // Connect Database
+// Connect Database
 // connectDB();
 
-// // Init Middleware
+// Init Middleware
 // app.use(express.json({ extended: false }));
-// app.get('/', (req, res) => res.send('API Running'));
+app.get('/', (req, res) => res.send('API is Running nicee'));
 
-// // Define routes
-// app.use('/api/users', require('../../../../../Summer_2019/SoftwareDev/SoftwareDesign/assignment2/routes/api/users'));
-// app.use('/api/auth', require('../../../../../Summer_2019/SoftwareDev/SoftwareDesign/assignment2/routes/api/auth'));
-// app.use('/api/profile', require('../../../../../Summer_2019/SoftwareDev/SoftwareDesign/assignment2/routes/api/profile'));
-// app.use('/api/quote', require('../../../../../Summer_2019/SoftwareDev/SoftwareDesign/assignment2/routes/api/quote'));
-// app.use('/api/quoteHistory', require('../../../../../Summer_2019/SoftwareDev/SoftwareDesign/assignment2/routes/api/quoteHistory'));
+// Define routes
+// app.use('/api/users', require('./routes/api/users'));
+// app.use('/api/auth', require('./routes/api/auth'));
 
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
-// app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
-
-
-// Something Like This
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
