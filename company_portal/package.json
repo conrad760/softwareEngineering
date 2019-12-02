@@ -1,12 +1,10 @@
 {
     "name": "company_portal",
     "description": "This is a portal for admin users to get to their company pages",
-    "main": "server.js",
+    "main": "./server.js",
     "scripts": {
         "start": "node server",
-        "server": "nodemon server",
-        "client": "cd client && yarn start",
-        "build": "cd client && yarn build"
+        "server": "nodemon server"
     },
     "dependencies": {
         "bcryptjs": "^2.4.3",
