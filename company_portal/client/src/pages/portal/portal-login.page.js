@@ -11,31 +11,29 @@ const Portal = () => {
     //     const data = result.data
 
     //     console.log(data);
-        
+
     // }, []);
 
-    const [email, setemail] = useState('')
-    const [password, setPassword] = useState('')
-    const handleSubmit = async (e) => {
+    const [email, setemail] = useState('');
+    const [password, setPassword] = useState('');
+    const handleSubmit = async e => {
         e.preventDefault();
-        const body = JSON.stringify({email, password})
-        console.log(body );
-        
+        const body = JSON.stringify({ email, password });
+        console.log(body);
+
         const config = {
             headers: {
-                'Content-Type':'application/json'
+                'Content-Type': 'application/json'
             }
-        }
+        };
         try {
-            const postData = await axios.post('/api/auth', body, config)
+            const postData = await axios.post('/api/auth', body, config);
             console.log(postData.data);
-            
         } catch (err) {
             console.log(err);
-            
-        }        
-    }
-    
+        }
+    };
+
     return (
         <Fragment>
             <div>
@@ -49,11 +47,11 @@ const Portal = () => {
                         <form onSubmit={handleSubmit}>
                             <div className='input-container'>
                                 <input
-                                    name="email"
+                                    name='email'
                                     type='text'
                                     id='#{label}'
                                     required='required'
-                                    onChange={(e) => setemail(e.target.value)}
+                                    onChange={e => setemail(e.target.value)}
                                 />
                                 <label for='#{label}'>email</label>
                                 <div className='bar'></div>
@@ -63,8 +61,8 @@ const Portal = () => {
                                     type='password'
                                     id='#{label}'
                                     required='required'
-                                    name="password"
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    name='password'
+                                    onChange={e => setPassword(e.target.value)}
                                 />
                                 <label for='#{label}'>Password</label>
                                 <div className='bar'></div>
@@ -79,7 +77,7 @@ const Portal = () => {
                 </div>
             </div>
         </Fragment>
-    )
+    );
 };
 
 export default Portal;
