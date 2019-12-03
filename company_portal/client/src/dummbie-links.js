@@ -113,3 +113,11 @@ const ENGG_ADMIN = [
         icon: ' fa fa-home fa-2x '
     }
 ];
+
+export default {
+    GLOBAL_ADMIN,
+    FINANCE_ADMIN,
+    SALES_ADMIN,
+    HR_ADMIN,
+    ENGG_ADMIN
+};
