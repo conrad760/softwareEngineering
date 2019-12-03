@@ -1,15 +1,13 @@
 import React from 'react';
-//import NavItem from '../../components/nav-bar/nav-item/nav-item.component'
-//import { BrowserRouter as Router, Route } from 'react-router-dom';
-
-
 import './dashboard.style.scss';
+import NavItem from '../../components/nav-bar/nav-item/nav-item.component';
 
 const Dashboard = () => (
     <>
         <div className='area'></div>
         <nav className='main-menu'>
             <ul>
+                <NavItem link='https://www.google.com' icon='fa fa-rocket fa-2x' linkName='Google'/>
                 <li>
                     <a href='www.google.com'>
                         <i className='fa fa-home fa-2x'></i>
