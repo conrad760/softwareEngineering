@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import EmployeeSearch from './pages/employee-search.page';
 import Portal from './pages/portal/portal-login.page';
 import Dashboard from './pages/dashboard/dashboard.page';
+// Redux
+import { Provider } from 'react-redux';
+import store from './store'
 
 
 
