@@ -21,3 +21,5 @@ const roles = (state = [], actions) => {
             return state;
     }
 };
+
+export default roles
