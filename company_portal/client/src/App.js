@@ -27,7 +27,7 @@ function App() {
                     <Route path='/sales' component={EmployeeSearch} />
                     <Route path='/HR' component={EmployeeSearch} />
                     <Route path='/eng' component={EmployeeSearch} />
-                    <Route path='/login' component={Portal} />
+                    <Route path='/' component={Portal} />
                     <Route path='/dashboard' component={Dashboard} />
                     <Route path='/cat-employees' component={EmployeeSearch} />
                 </Router>
