@@ -5,7 +5,17 @@ import {
     HR_ADMIN,
     ENGG_ADMIN
 } from '../../dummbie-links';
-const roles = (state = [], actions) => {
+
+const initialState = {
+    roles: [
+        {
+            linkName: '',
+            link: '',
+            icon: ''
+        }
+    ]
+};
+const roles = (state = initialState, actions) => {
     switch (actions.type) {
         case 'GLOBAL_ADMIN':
             return GLOBAL_ADMIN;
@@ -21,3 +31,5 @@ const roles = (state = [], actions) => {
             return state;
     }
 };
+
+export default roles
