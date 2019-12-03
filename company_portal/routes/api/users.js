@@ -7,6 +7,19 @@ const { check, validationResult } = require('express-validator');
 
 const User = require('../../models/User');
 
+// @route   GET api/users
+// @desc    Get all users
+// @access  Public
+router.get('/', async(req, res) => {
+    try {
+        const users = await User.find().select('-password');
+        res.send(users);
+    } catch (error) {
+        console.error(err.message);
+        res.status(500).send('Server error')
+    }
+})
+
 // @route   POST api/users
 // @desc    Register user
 // @access  Public
