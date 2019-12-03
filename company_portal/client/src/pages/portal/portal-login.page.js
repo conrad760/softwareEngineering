@@ -1,8 +1,12 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { Fragment, useState } from 'react';
+//import axios from 'axios';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { login } from '../../redux/actions/auth'
 import './portal-login.style.scss';
 
-const Portal = () => {
+const Portal = ({ login, isAuthenticated }) => {
     // useEffect(async() => {
     //     const result = await axios(
     //         '/api/users'
@@ -13,26 +17,45 @@ const Portal = () => {
     //     console.log(data);
 
     // }, []);
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
 
-    const [email, setemail] = useState('');
-    const [password, setPassword] = useState('');
-    const handleSubmit = async e => {
+    const { email, password } = formData;
+
+    const onChange = e =>
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    const onSubmit = async e => {
         e.preventDefault();
-        const body = JSON.stringify({ email, password });
-        console.log(body);
-
-        const config = {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
-        try {
-            const postData = await axios.post('/api/auth', body, config);
-            console.log(postData.data);
-        } catch (err) {
-            console.log(err);
-        }
+        login(email, password);
     };
+
+    // Redirect if logged in
+    if (isAuthenticated) {
+        return <Redirect to='/dashboard' />;
+    }
+
+    // const [email, setemail] = useState('');
+    // const [password, setPassword] = useState('');
+    // const handleSubmit = async e => {
+    //     e.preventDefault();
+    //     const body = JSON.stringify({ email, password });
+    //     console.log(body);
+
+    //     const config = {
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     };
+    //     try {
+    //         const postData = await axios.post('/api/auth', body, config);
+    //         console.log(postData.data);
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // };
 
     return (
         <Fragment>
@@ -44,16 +67,16 @@ const Portal = () => {
                     <div className='card'></div>
                     <div className='card'>
                         <h1 className='title'>Login</h1>
-                        <form onSubmit={handleSubmit}>
+                        <form className='form' onSubmit={e => onSubmit(e)}>
                             <div className='input-container'>
                                 <input
                                     name='email'
-                                    type='text'
+                                    type='email'
                                     id='#{label}'
                                     required='required'
-                                    onChange={e => setemail(e.target.value)}
+                                    onChange={e => onChange(e)}
                                 />
-                                <label for='#{label}'>email</label>
+                                <label>email</label>
                                 <div className='bar'></div>
                             </div>
                             <div className='input-container'>
@@ -62,9 +85,9 @@ const Portal = () => {
                                     id='#{label}'
                                     required='required'
                                     name='password'
-                                    onChange={e => setPassword(e.target.value)}
+                                    onChange={e => onChange(e)}
                                 />
-                                <label for='#{label}'>Password</label>
+                                <label>Password</label>
                                 <div className='bar'></div>
                             </div>
                             <div className='button-container'>
@@ -80,4 +103,17 @@ const Portal = () => {
     );
 };
 
-export default Portal;
+login.propTypes = {
+    login: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(
+    mapStateToProps,
+    { login }
+)(Portal);
+//export default Portal;
