@@ -3,33 +3,33 @@ import './portal-login.style.scss';
 
 const Portal = () => (
     <div>
-        <div class='pen-title'>
+        <div className='pen-title'>
             <h1>Company Portal</h1>
         </div>
-        <div class='container'>
-            <div class='card'></div>
-            <div class='card'>
-                <h1 class='title'>Login</h1>
+        <div className='container'>
+            <div className='card'></div>
+            <div className='card'>
+                <h1 className='title'>Login</h1>
                 <form>
-                    <div class='input-container'>
+                    <div className='input-container'>
                         <input
                             type='#{type}'
                             id='#{label}'
                             required='required'
                         />
                         <label for='#{label}'>Username</label>
-                        <div class='bar'></div>
+                        <div className='bar'></div>
                     </div>
-                    <div class='input-container'>
+                    <div className='input-container'>
                         <input
                             type='#{type}'
                             id='#{label}'
                             required='required'
                         />
                         <label for='#{label}'>Password</label>
-                        <div class='bar'></div>
+                        <div className='bar'></div>
                     </div>
-                    <div class='button-container'>
+                    <div className='button-container'>
                         <button>
                             <span>login</span>
                         </button>
