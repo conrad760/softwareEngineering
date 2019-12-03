@@ -4,18 +4,10 @@ import EmployeeSearch from './pages/employee-search.page';
 import Portal from './pages/portal/portal-login.page';
 import Dashboard from './pages/dashboard/dashboard.page';
 
-<<<<<<< HEAD
 function App() {
     return (
-        <div>
+        <>
             <Router>
-=======
-const App = () => 
-    <Router>
-        <Fragment>
-            <div>
-                <Portal />
->>>>>>> master
                 <Route path='/global' component={EmployeeSearch} />
                 <Route path='/finance' component={EmployeeSearch} />
                 <Route path='/sales' component={EmployeeSearch} />
@@ -24,8 +16,9 @@ const App = () =>
                 <Route path='/login' component={Portal} />
                 <Route path='/dashboard' component={Dashboard} />
                 <Route path='/cat-employees' component={EmployeeSearch} />
-            </div>
-        </Fragment>
-    </Router>
+            </Router>
+        </>
+    );
+}
 
 export default App;
