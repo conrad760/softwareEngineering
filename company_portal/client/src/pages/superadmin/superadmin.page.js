@@ -2,18 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logout } from '../../redux/actions/auth';
-import { Redirect } from 'react-router-dom';
 import '../dashboard/dashboard.style.scss';
 
 const SuperAdmin = ({
-    auth: { user, loading },
+    auth: { user },
     logout
 }) => {
     var role = user && user.role
-    console.log('role is', role);
     
     return role !== "super_admin" ? (
-        <h1>************OOOops********</h1>
+        <h1 align='center'>404 Not Found</h1>
     ) : (
         <>
             <div>
@@ -31,7 +29,7 @@ const SuperAdmin = ({
 
                 <ul className='logout'>
                     <li>
-                        <a onClick={logout} href='login'>
+                        <a onClick={logout} href='/'>
                             <i className='fa fa-power-off fa-2x'></i>
                             <span className='nav-text'>Logout</span>
                         </a>
