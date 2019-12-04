@@ -9,9 +9,6 @@ const SuperAdmin = ({
     auth: { user },
     logout
 }) => {
-    if(!loading) {
-        
-    }
     
     return (
         <>
