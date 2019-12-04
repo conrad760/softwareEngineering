@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { logout } from '../../redux/actions/auth';
 import {
     GLOBAL_ADMIN,
-    FINANCE_ADMIN,
+    FIN_ADMIN,
     SALES_ADMIN,
     HR_ADMIN,
     ENG_ADMIN
@@ -15,7 +15,7 @@ import './dashboard.style.scss';
 import NavItem from '../../components/nav-bar/nav-item/nav-item.component';
 import {
     get_GLOBAL_ADMIN,
-    get_FINANCE_ADMIN,
+    get_FIN_ADMIN,
     get_SALES_ADMIN,
     get_HR_ADMIN,
     get_ENG_ADMIN
@@ -42,8 +42,8 @@ const Dashboard = ({ auth: { user }, logout }) => {
                 case 'GLOBAL_ADMIN':
                     setRole(GLOBAL_ADMIN);
                     break;
-                case 'FINANCE_ADMIN':
-                    setRole(FINANCE_ADMIN);
+                case 'FIN_ADMIN':
+                    setRole(FIN_ADMIN);
                     break;
                 case 'SALES_ADMIN':
                     setRole(SALES_ADMIN);
