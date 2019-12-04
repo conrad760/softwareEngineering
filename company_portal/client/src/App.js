@@ -6,7 +6,7 @@ import Dashboard from './pages/dashboard/dashboard.page';
 import PrivateRoute from './components/routing/PrivateRoute';
 // Redux
 import { Provider } from 'react-redux';
-import store from './store'
+import store from './store';
 import { loadUser } from './redux/actions/auth';
 import setAuthToken from './util/setAuthToken';
 import SuperAdmin from './pages/superadmin/superadmin.page';
@@ -30,8 +30,16 @@ function App() {
                     <Route path='/HR' component={EmployeeSearch} />
                     <Route path='/eng' component={EmployeeSearch} />
                     <Route path='/' component={Portal} />
-                    <PrivateRoute exact path='/dashboard' component={Dashboard} />
-                    <PrivateRoute exact path='/superadmin' component={SuperAdmin}/>
+                    <PrivateRoute
+                        exact
+                        path='/dashboard'
+                        component={Dashboard}
+                    />
+                    <PrivateRoute
+                        exact
+                        path='/superadmin'
+                        component={SuperAdmin}
+                    />
 
                     <Route path='/cat-employees' component={EmployeeSearch} />
                 </Router>
