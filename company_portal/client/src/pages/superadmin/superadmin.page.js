@@ -38,6 +38,41 @@ const SuperAdmin = ({
                     </li>
                 </ul>
             </nav>
+            <div align='center'>
+                <h2>Admin Panel</h2>
+                <form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                </th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            user
+                        </tbody>
+                    </table>
+                    <div>
+                        <h2>Select Role To Assign: </h2>
+                        <div className="input-field col s12">
+                            <select className='browser-default' name="role" required>
+                                <option value="" disabled selected>CHOOSE ROLE</option>
+                                <option value="ADMIN"> ADMIN</option>
+                                <option value="FINANCE_ADMIN"> FINANCE ADMIN</option>
+                                <option value="SALES_ADMIN">SALES ADMIN</option>
+                                <option value="HR_ADMIN">HR ADMIN</option>
+                                <option value="ENG_ADMIN">ENG ADMIN</option>
+                            </select>
+                        </div>
+                        <button className="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i className="material-icons right">send</i>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </>
     )
 };

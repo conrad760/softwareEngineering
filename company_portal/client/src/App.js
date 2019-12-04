@@ -10,7 +10,7 @@ import store from './store';
 import { loadUser } from './redux/actions/auth';
 import setAuthToken from './util/setAuthToken';
 import SuperAdmin from './pages/superadmin/superadmin.page';
-import UserPage from './pages/userpage.page';
+//import UserPage from './pages/userpage.page';
 
 if (localStorage.token) {
     setAuthToken(localStorage.token);
