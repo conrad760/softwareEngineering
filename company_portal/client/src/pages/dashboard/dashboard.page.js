@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './dashboard.style.scss';
 import NavItem from '../../components/nav-bar/nav-item/nav-item.component';
@@ -12,25 +12,29 @@ import {
 
 const Dashboard = () => {
     const dispatch = useDispatch();
-    const data = dispatch(get_GLOBAL_ADMIN());
-    // console.log(data);
-    const roles = useSelector(state => state.roles);
-    console.log(roles);
+    // const data = dispatch(get_ENGG_ADMIN());
+    // // console.log(data);
+    // const roles = useSelector(state => state.roles);
+    // console.log(roles);
+    const [role, setRole] = useState([])
+    // useEffect(() => {
+
+    // })
+    const currentUser = useSelector(state => state.auth);
+    console.log(currentUser);
 
     return (
         <>
             <div className='area'></div>
             <nav className='main-menu'>
                 <ul>
-                    {roles.map(role => 
-                    <NavItem
-                    link = {role.link} 
-                    linkName = {role.linkName} 
-                    icon = {role.icon} 
-                    />
-                        )}
-                        
-                    
+                    {/* {roles.map(role => (
+                        <NavItem
+                            link={role.link}
+                            linkName={role.linkName}
+                            icon={role.icon}
+                        />
+                    ))} */}
                 </ul>
 
                 <ul className='logout'>
