@@ -18,8 +18,8 @@ export const get_HR_ADMIN = () => {
         type: 'HR_ADMIN'
     }
 }
-export const get_ENGG_ADMIN = () => {
+export const get_ENGENGG_ADMIN = () => {
     return {
-        type: 'ENGG_ADMIN'
+        type: 'ENG_ADMIN'
     }
 }

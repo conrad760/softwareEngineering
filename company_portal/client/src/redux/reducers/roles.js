@@ -3,7 +3,7 @@ import {
     FINANCE_ADMIN,
     SALES_ADMIN,
     HR_ADMIN,
-    ENGG_ADMIN
+    ENG_ADMIN
 } from '../../dummbie-links';
 const roles = (state = [], actions) => {
     switch (actions.type) {
@@ -15,11 +15,11 @@ const roles = (state = [], actions) => {
             return SALES_ADMIN;
         case 'HR_ADMIN':
             return HR_ADMIN;
-        case 'ENGG_ADMIN':
-            return ENGG_ADMIN;
+        case 'ENG_ADMIN':
+            return ENG_ADMIN;
         default:
             return state;
     }
 };
 
-export default roles
+export default roles;
