@@ -1,4 +1,4 @@
-const GLOBAL_ADMIN = [
+export const GLOBAL_ADMIN = [
     {
         link: 'manage',
         linkName: 'Manage User Account',
@@ -19,7 +19,7 @@ const GLOBAL_ADMIN = [
         ,id:3
     }
 ];
-const FINANCE_ADMIN = [
+export const FINANCE_ADMIN = [
     {
         link: 'finance_report',
         linkName: 'Finance Reports',
@@ -41,11 +41,26 @@ const FINANCE_ADMIN = [
     {
         link: 'tax',
         linkName: 'Tax',
-        icon: ' fas fa-file-chart-pie fa-2x '
-        ,id:7
+        icon: ' fas fa-file-chart-pie fa-2x ',
+        id:7
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Manage User Account',
+        icon: ' fa fa-home fa-2x '
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Assign Roles',
+        icon: ' fa fa-home fa-2x '
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Help Desk',
+        icon: ' fa fa-home fa-2x '
     }
 ];
-const SALES_ADMIN = [
+export const SALES_ADMIN = [
     {
         link: 'sales_report',
         linkName: 'Sales Reports',
@@ -61,11 +76,26 @@ const SALES_ADMIN = [
     {
         link: 'demo',
         linkName: 'Sales Demo',
-        icon: ' fas fa-layer-group fa-2x '
-        ,id:10
+        icon: ' fas fa-layer-group fa-2x ',
+        id:10
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Manage User Account',
+        icon: ' fa fa-home fa-2x '
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Assign Roles',
+        icon: ' fa fa-home fa-2x '
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Help Desk',
+        icon: ' fa fa-home fa-2x '
     }
 ];
-const HR_ADMIN = [
+export const HR_ADMIN = [
     {
         link: 'NewHire',
         linkName: 'New Hire',
@@ -99,11 +129,26 @@ const HR_ADMIN = [
     {
         link: 'hrReport',
         linkName: 'HR Reports',
-        icon: ' fas fa-file-chart-pie fa-2x '
-        ,id:16
+        icon: ' fas fa-file-chart-pie fa-2x ',
+        id:16
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Manage User Account',
+        icon: ' fa fa-home fa-2x '
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Assign Roles',
+        icon: ' fa fa-home fa-2x '
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Help Desk',
+        icon: ' fa fa-home fa-2x '
     }
 ];
-const ENGG_ADMIN = [
+export const ENG_ADMIN = [
     {
         link: 'appMonitor',
         linkName: 'Application Monitoring',
@@ -132,8 +177,23 @@ const ENGG_ADMIN = [
     {
         link: 'releaseManagement',
         linkName: 'Release Management',
-        icon: ' fas fa-file-chart-pie fa-2x '
-        ,id:21
+        icon: ' fas fa-file-chart-pie fa-2x ',
+        id:21
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Manage User Account',
+        icon: ' fa fa-home fa-2x '
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Assign Roles',
+        icon: ' fa fa-home fa-2x '
+    },
+    {
+        link: 'https://www.google.com',
+        linkName: 'Help Desk',
+        icon: ' fa fa-home fa-2x '
     }
 ];
 
@@ -142,5 +202,5 @@ export default {
     FINANCE_ADMIN,
     SALES_ADMIN,
     HR_ADMIN,
-    ENGG_ADMIN
+    ENG_ADMIN
 };
