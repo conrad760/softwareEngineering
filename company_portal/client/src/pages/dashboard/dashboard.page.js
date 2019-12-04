@@ -1,11 +1,28 @@
 import React from 'react';
+//import NavItem from '../../components/nav-bar/nav-item/nav-item.component'
+//import { BrowserRouter as Router, Route } from 'react-router-dom'; 
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { logout } from '../../redux/actions/auth';
+
 import './dashboard.style.scss';
 import NavItem from '../../components/nav-bar/nav-item/nav-item.component';
 
-const Dashboard = () => (
+const Dashboard = ({
+    auth: { 
+        user
+    },
+    logout
+}) => {
+    console.log(user);
+    
+    return (
     <>
-        <div className='area'></div>
+        <div className='area'>
+            <p>***********************Welcome {user && user.name} ,and thank you for being here. Your role is {user && user.role}</p>
+        </div>
         <nav className='main-menu'>
+        
             <ul>
                 <NavItem link='https://www.google.com' icon='fa fa-rocket fa-2x' linkName='Google'/>
                 <li>
@@ -66,14 +83,29 @@ const Dashboard = () => (
 
             <ul className='logout'>
                 <li>
-                    <a href='www.google.com'>
+                    <a onClick={logout} href='login'>
                         <i className='fa fa-power-off fa-2x'></i>
                         <span className='nav-text'>Logout</span>
                     </a>
                 </li>
             </ul>
         </nav>
-    </>
-);
+    </>)
+};
 
-export default Dashboard;
+Dashboard.propTypes = {
+    auth: PropTypes.object.isRequired,
+    logout: PropTypes.func.isRequired
+};
+
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+export default connect(
+    mapStateToProps, {
+        logout
+    }
+)(Dashboard);
+
+//export default Dashboard;
