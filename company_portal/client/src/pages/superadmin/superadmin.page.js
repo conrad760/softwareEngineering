@@ -20,8 +20,6 @@ const SuperAdmin = ({ auth: { user, loading }, logout }) => {
         }
     }, []);
     var role = user && user.role;
-    console.log('role is', role);
-
     const handleChange = e => {
         setValue(e.target.value);
     };
@@ -36,7 +34,7 @@ const SuperAdmin = ({ auth: { user, loading }, logout }) => {
         await axios.put(`/api/users/${targetUser}`, body, config);
     };
     return role !== 'super_admin' ? (
-        <h1></h1>
+        <h1 align='center'>404 Not Found</h1>
     ) : (
         <>
             <div></div>
@@ -52,7 +50,7 @@ const SuperAdmin = ({ auth: { user, loading }, logout }) => {
 
                 <ul className='logout'>
                     <li>
-                        <a onClick={logout} href='login'>
+                        <a onClick={logout} href='/'>
                             <i className='fa fa-power-off fa-2x'></i>
                             <span className='nav-text'>Logout</span>
                         </a>

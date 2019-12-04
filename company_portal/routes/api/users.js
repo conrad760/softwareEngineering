@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const config = require('dotenv').config();
 const { check, validationResult } = require('express-validator');
 
 const User = require('../../models/User');
@@ -53,8 +52,7 @@ router.post(
             user = new User({
                 name,
                 email,
-                password,
-                role
+                password
             });
 
             // Encrypt password
@@ -63,8 +61,8 @@ router.post(
             user.password = await bcrypt.hash(password, salt);
             await user.save();
 
-            // Return jsonwebtoken
-            res.send('User registered');
+            // // Return jsonwebtoken
+            // res.send(user)
             const payload = {
                 user: {
                     id: user.id
@@ -73,7 +71,7 @@ router.post(
 
             jwt.sign(
                 payload,
-                config.get('jwtSecret'),
+                process.env.JWT_SECRET,
                 { expiresIn: 360000 },
                 (err, token) => {
                     if (err) throw err;

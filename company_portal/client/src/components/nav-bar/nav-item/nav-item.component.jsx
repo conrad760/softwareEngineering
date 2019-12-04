@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const NavItem = props => (
     <li>
-        <Link to={props.link}>
+        <Link to={`/dashboard/${props.link}`}>
             <i className={props.icon}></i>
             <span className='nav-text'>{props.linkName}</span>
         </Link>

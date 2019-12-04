@@ -20,18 +20,6 @@ import {
     get_HR_ADMIN,
     get_ENG_ADMIN
 } from '../../redux/actions/index';
-// const Dashboard = () => {
-//     const dispatch = useDispatch();
-//     // const data = dispatch(get_ENG_ADMIN());
-//     // // console.log(data);
-//     // const roles = useSelector(state => state.roles);
-//     // console.log(roles);
-//     const [role, setRole] = useState([])
-//     // useEffect(() => {
-
-//     // })
-//     const currentUser = useSelector(state => state.auth);
-//     console.log(currentUser);
 
 const Dashboard = ({ auth: { user }, logout }) => {
 
@@ -60,13 +48,19 @@ const Dashboard = ({ auth: { user }, logout }) => {
         }
     }, [user]);
 
+    var status = ''
+
+    if (user && user.role === 'none') {
+        status = 'Please await for a role to be assigned to you.';
+    }
+
     return (
         <>
             <div className='area'>
-                <p>
+                <h3 align='center'>
                     Welcome {user && user.name}, and thank you for being
-                    here. Your role is {user && user.role}
-                </p>
+                    here. {status}
+                </h3>
             </div>
             <nav className='main-menu'>
                 <ul>

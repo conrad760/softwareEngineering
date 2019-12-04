@@ -1,22 +1,12 @@
 import React, { Fragment, useState } from 'react';
 //import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../redux/actions/auth'
 import './portal-login.style.scss';
 
 const Portal = ({ login, isAuthenticated, user }) => {
-    // useEffect(async() => {
-    //     const result = await axios(
-    //         '/api/users'
-    //     )
-
-    //     const data = result.data
-
-    //     console.log(data);
-
-    // }, []);
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -37,31 +27,9 @@ const Portal = ({ login, isAuthenticated, user }) => {
         
         if(user.role === 'super_admin'){
             return <Redirect to='/superadmin' />;
-
         }
         return <Redirect to='/dashboard' />;
     }
-
-    // const [email, setemail] = useState('');
-    // const [password, setPassword] = useState('');
-    // const handleSubmit = async e => {
-    //     e.preventDefault();
-    //     const body = JSON.stringify({ email, password });
-    //     console.log(body);
-
-    //     const config = {
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     };
-    //     try {
-    //         const postData = await axios.post('/api/auth', body, config);
-    //         console.log(postData.data);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // };
-    // hehe
 
     return (
         <Fragment>
@@ -102,6 +70,9 @@ const Portal = ({ login, isAuthenticated, user }) => {
                                 </button>
                             </div>
                         </form>
+                        <p align='center'>
+                            Don't have an account? <Link to='/register'>Sign Up</Link>
+                        </p>
                     </div>
                 </div>
             </div>
