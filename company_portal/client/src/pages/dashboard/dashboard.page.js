@@ -11,7 +11,10 @@ const Dashboard = ({
         user
     },
     logout
-}) => (
+}) => {
+    console.log(user);
+    
+    return (
     <>
         <div className='area'>
             <p>***********************Welcome {user && user.name} ,and thank you for being here. Your role is {user && user.role}</p>
@@ -84,8 +87,8 @@ const Dashboard = ({
                 </li>
             </ul>
         </nav>
-    </>
-);
+    </>)
+};
 
 Dashboard.propTypes = {
     auth: PropTypes.object.isRequired,
