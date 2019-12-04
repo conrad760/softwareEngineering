@@ -6,14 +6,13 @@ import { Redirect } from 'react-router-dom';
 import '../dashboard/dashboard.style.scss';
 
 const SuperAdmin = ({
-    auth: { user, loading },
+    auth: { user },
     logout
 }) => {
     var role = user && user.role
-    console.log('role is', role);
     
     return role !== "super_admin" ? (
-        <h1>************OOOops********</h1>
+        <h1 align='center'>404 Not Found</h1>
     ) : (
         <>
             <div>

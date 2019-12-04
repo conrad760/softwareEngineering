@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import EmployeeSearch from './pages/employee-search.page';
+import Alert from './components/layout/Alert';
 import Portal from './pages/portal/portal-login.page';
+import Register from './pages/portal/portal-register.page';
 import Dashboard from './pages/dashboard/dashboard.page';
 import PrivateRoute from './components/routing/PrivateRoute';
 // Redux
@@ -24,8 +26,10 @@ function App() {
     return (
         <Provider store={store}>
             <>
+            <Alert/>
                 <Router>
-                    <Route path='/' component={Portal} />
+                    <Route exact path='/' component={Portal} />
+                    <Route exact path='/register' component={Register} />
                     <PrivateRoute
                         exact
                         path='/superadmin'

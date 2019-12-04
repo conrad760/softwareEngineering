@@ -20,18 +20,6 @@ import {
     get_HR_ADMIN,
     get_ENG_ADMIN
 } from '../../redux/actions/index';
-// const Dashboard = () => {
-//     const dispatch = useDispatch();
-//     // const data = dispatch(get_ENG_ADMIN());
-//     // // console.log(data);
-//     // const roles = useSelector(state => state.roles);
-//     // console.log(roles);
-//     const [role, setRole] = useState([])
-//     // useEffect(() => {
-
-//     // })
-//     const currentUser = useSelector(state => state.auth);
-//     console.log(currentUser);
 
 const Dashboard = ({ auth: { user }, logout }) => {
 
