@@ -10,6 +10,7 @@ import store from './store';
 import { loadUser } from './redux/actions/auth';
 import setAuthToken from './util/setAuthToken';
 import SuperAdmin from './pages/superadmin/superadmin.page';
+import UserPage from './pages/userpage.page';
 
 if (localStorage.token) {
     setAuthToken(localStorage.token);
@@ -24,17 +25,8 @@ function App() {
         <Provider store={store}>
             <>
                 <Router>
-                    <Route path='/global' component={EmployeeSearch} />
-                    <Route path='/finance' component={EmployeeSearch} />
-                    <Route path='/sales' component={EmployeeSearch} />
-                    <Route path='/HR' component={EmployeeSearch} />
-                    <Route path='/eng' component={EmployeeSearch} />
                     <Route path='/' component={Portal} />
-                    <PrivateRoute
-                        exact
-                        path='/dashboard'
-                        component={Dashboard}
-                    />
+                    <PrivateRoute path='/dashboard/:id' component={Dashboard} />
                     <PrivateRoute
                         exact
                         path='/superadmin'
