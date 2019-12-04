@@ -2,14 +2,14 @@ export const GLOBAL_ADMIN = [
     {
         link: 'manage',
         linkName: 'Manage User Account',
-        icon: ' fas fa-person-carry fa-2x '
+        icon: ' fas fa-person-carry fas-2x '
         
         ,id:1
     },
     {
         link: 'assignRoles',
         linkName: 'Assign Roles',
-        icon: ' far fa-file fa-2x '
+        icon: ' far fa-file far-2x '
         ,id:2
     },
     {
@@ -45,54 +45,60 @@ export const FINANCE_ADMIN = [
         id:7
     },
     {
-        link: 'https://www.google.com',
+        link: 'manageUserAccount',
         linkName: 'Manage User Account',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 25
     },
     {
-        link: 'https://www.google.com',
+        link: 'assignRoles',
         linkName: 'Assign Roles',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 26
     },
     {
-        link: 'https://www.google.com',
+        link: 'helpDesk',
         linkName: 'Help Desk',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 27
     }
 ];
 export const SALES_ADMIN = [
     {
         link: 'sales_report',
         linkName: 'Sales Reports',
-        icon: ' far fa-file fa-2x '
+        icon: ' far fa-file far-2x '
         ,id:8
     },
     {
         link: 'lead',
         linkName: 'Sales Leads',
-        icon: ' fas fa-file-chart-pie fa-2x '
+        icon: ' fas fa-file-chart-pie fas-2x '
         ,id:9
     },
     {
         link: 'demo',
         linkName: 'Sales Demo',
-        icon: ' fas fa-layer-group fa-2x ',
+        icon: ' fas fa-layer-group fas-2x ',
         id:10
     },
     {
-        link: 'https://www.google.com',
+        link: 'manageUserAccount',
         linkName: 'Manage User Account',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 28
     },
     {
-        link: 'https://www.google.com',
+        link: 'assignRoles',
         linkName: 'Assign Roles',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 29
     },
     {
-        link: 'https://www.google.com',
+        link: 'helpDesk',
         linkName: 'Help Desk',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 30
     }
 ];
 export const HR_ADMIN = [
@@ -133,40 +139,42 @@ export const HR_ADMIN = [
         id:16
     },
     {
-        link: 'https://www.google.com',
+        link: 'manageUserAccount',
         linkName: 'Manage User Account',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 31
     },
     {
-        link: 'https://www.google.com',
+        link: 'assignRoles',
         linkName: 'Assign Roles',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 32
     },
     {
-        link: 'https://www.google.com',
+        link: 'helpDesk',
         linkName: 'Help Desk',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 33
     }
 ];
 export const ENG_ADMIN = [
     {
         link: 'appMonitor',
         linkName: 'Application Monitoring',
-        icon: ' fas fa-tv fa-2x '
-        ,id:17
+        icon: ' fas fa-tv fa-2x ',
+        id:17
     },
     {
         link: 'techSupport',
         linkName: 'Tech Support',
-        icon: 'fas fa-hands-helping fa-2x '
-        ,id:18
+        icon: 'fas fa-hands-helping fa-2x ',
+        id:18
     },
     {
         link: 'appDevelopment',
         linkName: 'App Development',
-        icon: ' fas fa-layer-group fa-2x '
-        
-        ,id:19
+        icon: ' fas fa-layer-group fa-2x ',
+        id:19
     },
     {
         link: 'appAdmin',
@@ -181,19 +189,22 @@ export const ENG_ADMIN = [
         id:21
     },
     {
-        link: 'https://www.google.com',
+        link: 'manageAccount',
         linkName: 'Manage User Account',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 22
     },
     {
-        link: 'https://www.google.com',
+        link: 'assignRoles',
         linkName: 'Assign Roles',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 23
     },
     {
-        link: 'https://www.google.com',
+        link: 'HelpDesk',
         linkName: 'Help Desk',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-home fa-2x ',
+        id: 24
     }
 ];
 
