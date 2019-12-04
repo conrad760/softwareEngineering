@@ -14,7 +14,7 @@ const SuperAdmin = ({ auth: { user, loading }, logout }) => {
     useEffect(async () => {
         try {
             const res = await axios.get('/api/users');
-            setUser(res.data.filter(d => d.role != 'super_admin'));
+            setUser(res.data.filter(d => d.role !== 'super_admin'));
         } catch (error) {
             console.log(error);
         }
@@ -111,6 +111,7 @@ const SuperAdmin = ({ auth: { user, loading }, logout }) => {
                                 <option value='eng_admin'>
                                     Engineering Admin
                                 </option>
+                                <option value='None'>None</option>
                             </select>
 
                             <h2> to be assigned to user of </h2>
