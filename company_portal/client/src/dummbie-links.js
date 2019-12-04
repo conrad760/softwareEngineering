@@ -1,3 +1,9 @@
+export const SUPER_ADMIN = [{
+    link: 'superDuper',
+    linkName: 'Manage Admin',
+    icon: 'fa fa-admin fa-2x'
+
+}]
 export const GLOBAL_ADMIN = [
     {
         link: 'manage',
@@ -64,13 +70,13 @@ export const SALES_ADMIN = [
     {
         link: 'sales_report',
         linkName: 'Sales Reports',
-        icon: ' far fa-file fa-2x '
+        icon: ' fa fa-file fa-2x '
         ,id:8
     },
     {
         link: 'lead',
         linkName: 'Sales Leads',
-        icon: ' fas fa-file-chart-pie fa-2x '
+        icon: ' fas fas-file-chart-pie fa-2x '
         ,id:9
     },
     {
