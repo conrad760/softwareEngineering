@@ -4,7 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logout } from '../../redux/actions/auth';
+
 import './dashboard.style.scss';
+import NavItem from '../../components/nav-bar/nav-item/nav-item.component';
 
 const Dashboard = ({
     auth: { 
@@ -22,6 +24,7 @@ const Dashboard = ({
         <nav className='main-menu'>
         
             <ul>
+                <NavItem link='https://www.google.com' icon='fa fa-rocket fa-2x' linkName='Google'/>
                 <li>
                     <a href='www.google.com'>
                         <i className='fa fa-home fa-2x'></i>

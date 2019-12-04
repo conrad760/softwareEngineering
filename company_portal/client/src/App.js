@@ -32,6 +32,7 @@ function App() {
                     <Route path='/' component={Portal} />
                     <PrivateRoute exact path='/dashboard' component={Dashboard} />
                     <PrivateRoute exact path='/superadmin' component={SuperAdmin}/>
+
                     <Route path='/cat-employees' component={EmployeeSearch} />
                 </Router>
             </>
