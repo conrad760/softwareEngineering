@@ -40,7 +40,6 @@ function App() {
                         path='/superadmin'
                         component={SuperAdmin}
                     />
-
                     <Route path='/cat-employees' component={EmployeeSearch} />
                 </Router>
             </>

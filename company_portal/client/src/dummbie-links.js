@@ -2,39 +2,47 @@ export const GLOBAL_ADMIN = [
     {
         link: 'manage',
         linkName: 'Manage User Account',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-person-carry fa-2x '
+        
+        ,id:1
     },
     {
         link: 'assignRoles',
         linkName: 'Assign Roles',
-        icon: ' fa fa-home fa-2x '
+        icon: ' far fa-file fa-2x '
+        ,id:2
     },
     {
         link: 'help',
         linkName: 'Help Desk',
-        icon: ' fa fa-home fa-2x '
+        icon: 'fas fa-hands-helping fa-2x '
+        ,id:3
     }
 ];
 export const FINANCE_ADMIN = [
     {
         link: 'finance_report',
         linkName: 'Finance Reports',
-        icon: ' fa fa-home fa-2x '
+        icon: ' far fa-file fa-2x '
+        ,id:4
     },
     {
         link: 'payable',
         linkName: 'Accounts Payable',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fa fa-money-check-alt fa-2x '
+        ,id:5
     },
     {
         link: 'receivable',
         linkName: 'Accounts Receivables',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-person-carry fa-2x '
+        ,id:6
     },
     {
         link: 'tax',
         linkName: 'Tax',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-file-chart-pie fa-2x ',
+        id:7
     },
     {
         link: 'https://www.google.com',
@@ -56,17 +64,20 @@ export const SALES_ADMIN = [
     {
         link: 'sales_report',
         linkName: 'Sales Reports',
-        icon: ' fa fa-home fa-2x '
+        icon: ' far fa-file fa-2x '
+        ,id:8
     },
     {
         link: 'lead',
         linkName: 'Sales Leads',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-file-chart-pie fa-2x '
+        ,id:9
     },
     {
         link: 'demo',
         linkName: 'Sales Demo',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-layer-group fa-2x ',
+        id:10
     },
     {
         link: 'https://www.google.com',
@@ -88,32 +99,38 @@ export const HR_ADMIN = [
     {
         link: 'NewHire',
         linkName: 'New Hire',
-        icon: ' fa fa-home fa-2x '
+        icon: ' far fa-file fa-2x '
+        ,id:11
     },
     {
         link: 'onBoarding',
         linkName: 'On-Boarding',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-layer-group fa-2x '
+        ,id:12
     },
     {
         link: 'benefit',
         linkName: 'Benefits',
-        icon: ' fa fa-home fa-2x '
+        icon: 'fas fa-hands-helping fa-2x '
+        ,id:13
     },
     {
         link: 'payRoll',
         linkName: 'Payroll',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-money-check-alt fa-2x '
+        ,id:14
     },
     {
         link: 'term',
         linkName: 'Terminations',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-clock fa-2x '
+        ,id:15
     },
     {
         link: 'hrReport',
         linkName: 'HR Reports',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-file-chart-pie fa-2x ',
+        id:16
     },
     {
         link: 'https://www.google.com',
@@ -135,27 +152,33 @@ export const ENG_ADMIN = [
     {
         link: 'appMonitor',
         linkName: 'Application Monitoring',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-tv fa-2x '
+        ,id:17
     },
     {
         link: 'techSupport',
         linkName: 'Tech Support',
-        icon: ' fa fa-home fa-2x '
+        icon: 'fas fa-hands-helping fa-2x '
+        ,id:18
     },
     {
         link: 'appDevelopment',
         linkName: 'App Development',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-layer-group fa-2x '
+        
+        ,id:19
     },
     {
         link: 'appAdmin',
         linkName: 'App Admin',
-        icon: ' fa fa-home fa-2x '
+        icon: ' far fa-file fa-2x '
+        ,id:20
     },
     {
         link: 'releaseManagement',
         linkName: 'Release Management',
-        icon: ' fa fa-home fa-2x '
+        icon: ' fas fa-file-chart-pie fa-2x ',
+        id:21
     },
     {
         link: 'https://www.google.com',
