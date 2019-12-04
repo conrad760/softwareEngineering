@@ -3,7 +3,7 @@ import { Table, Container, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logout } from '../../redux/actions/auth';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
 import '../dashboard/dashboard.style.scss';
 
@@ -41,10 +41,10 @@ const SuperAdmin = ({ auth: { user, loading }, logout }) => {
             <nav className='main-menu'>
                 <ul>
                     <li>
-                        <a href='www.google.com'>
+                        <Link to='/superadmin'>
                             <i className='fa fa-home fa-2x'></i>
-                            <span className='nav-text'>Dashboard</span>
-                        </a>
+                            <span className='nav-text'>Super Dashboard</span>
+                        </Link>
                     </li>
                 </ul>
 
@@ -98,11 +98,19 @@ const SuperAdmin = ({ auth: { user, loading }, logout }) => {
                                 required
                             >
                                 <option value=''>Select</option>
-                                <option value='global_admin'> ADMIN</option>
-                                <option value='fin_admin'> FIN ADMIN</option>
-                                <option value='sales_admin'>SALES ADMIN</option>
-                                <option value='hr_admin'>HR ADMIN</option>
-                                <option value='eng_admin'>ENG ADMIN</option>
+                                <option value='global_admin'>
+                                    {' '}
+                                    Global Admin
+                                </option>
+                                <option value='fin_admin'>
+                                    {' '}
+                                    Finance Admin
+                                </option>
+                                <option value='sales_admin'>Sales Admin</option>
+                                <option value='hr_admin'>HR Admin</option>
+                                <option value='eng_admin'>
+                                    Engineering Admin
+                                </option>
                             </select>
 
                             <h2> to be assigned to user of </h2>

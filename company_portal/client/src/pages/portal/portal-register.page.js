@@ -15,11 +15,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     });
 
     const { name, email, password, password2 } = formData;
-    
+
     const onChange = e =>
         setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const onSubmit =  e => {
+    const onSubmit = e => {
         e.preventDefault();
         if (password !== password2) {
             setAlert('Passwords do not match', 'danger');
@@ -35,72 +35,72 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
     return (
         <Fragment>
-        <div>
-            <div className='pen-title'>
-                <h1>Company Portal</h1>
-            </div>
-            <div className='container'>
-                <div className='card'></div>
-                <div className='card'>
-                    <h1 className='title'>Register</h1>
-                    <form className='form' onSubmit={onSubmit}>
-                        <div className='input-container'>
-                            <input
-                                name='name'
-                                value={name}
-                                type='text'
-                                required='required'
-                                onChange={e => onChange(e)}
-                            />
-                            <label>name</label>
-                            <div className='bar'></div>
-                        </div>
-                        <div className='input-container'>
-                            <input
-                                name='email'
-                                value={email}
-                                type='email'
-                                required='required'
-                                onChange={e => onChange(e)}
-                            />
-                            <label>email</label>
-                            <div className='bar'></div>
-                        </div>
-                        <div className='input-container'>
-                            <input
-                                type='password'
-                                required='required'
-                                name='password'
-                                value={password}
-                                onChange={e => onChange(e)}
-                            />
-                            <label>Password</label>
-                            <div className='bar'></div>
-                        </div>
-                        <div className='input-container'>
-                            <input
-                                type='password'
-                                value={password2}
-                                required='required'
-                                name='password2'
-                                onChange={e => onChange(e)}
-                            />
-                            <label>Confirm Password</label>
-                            <div className='bar'></div>
-                        </div>
-                        <div className='button-container'>
-                            <button>
-                                <span>login</span>
-                            </button>
-                        </div>
-                    </form>
-                    <p align='center'>
+            <div>
+                <div className='pen-title'>
+                    <h1>Company Portal</h1>
+                </div>
+                <div className='container'>
+                    <div className='card'></div>
+                    <div className='card'>
+                        <h1 className='title'>Register</h1>
+                        <form className='form' onSubmit={onSubmit}>
+                            <div className='input-container'>
+                                <input
+                                    name='name'
+                                    value={name}
+                                    type='text'
+                                    required='required'
+                                    onChange={e => onChange(e)}
+                                />
+                                <label>name</label>
+                                <div className='bar'></div>
+                            </div>
+                            <div className='input-container'>
+                                <input
+                                    name='email'
+                                    value={email}
+                                    type='email'
+                                    required='required'
+                                    onChange={e => onChange(e)}
+                                />
+                                <label>email</label>
+                                <div className='bar'></div>
+                            </div>
+                            <div className='input-container'>
+                                <input
+                                    type='password'
+                                    required='required'
+                                    name='password'
+                                    value={password}
+                                    onChange={e => onChange(e)}
+                                />
+                                <label>Password</label>
+                                <div className='bar'></div>
+                            </div>
+                            <div className='input-container'>
+                                <input
+                                    type='password'
+                                    value={password2}
+                                    required='required'
+                                    name='password2'
+                                    onChange={e => onChange(e)}
+                                />
+                                <label>Confirm Password</label>
+                                <div className='bar'></div>
+                            </div>
+                            <div className='button-container'>
+                                <button>
+                                    <span>Register</span>
+                                </button>
+                            </div>
+                        </form>
+                        <p align='center'>
                             Already have an account? <Link to='/'>Login</Link>
                         </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </Fragment>
+        </Fragment>
     );
 };
 
@@ -114,7 +114,4 @@ const mapStateToProps = state => ({
     isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(
-    mapStateToProps,
-    { setAlert, register }
-)(Register);
+export default connect(mapStateToProps, { setAlert, register })(Register);

@@ -48,7 +48,7 @@ export const FIN_ADMIN = [
     {
         link: 'tax',
         linkName: 'Tax',
-        icon: ' fas fa-file-chart-pie fa-2x ',
+        icon: ' fa fa-file fa-2x ',
         id: 7
     },
     {
@@ -135,7 +135,7 @@ export const HR_ADMIN = [
     },
     {
         link: 'term',
-        linkName: 'Termin>ations',
+        linkName: 'Terminations',
         icon: ' fa fa-user fa-2x ',
         id: 15
     },
