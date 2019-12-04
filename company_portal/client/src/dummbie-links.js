@@ -5,7 +5,7 @@ const GLOBAL_ADMIN = [
         icon: ' fa fa-home fa-2x '
     },
     {
-        link: 'roles',
+        link: 'assignRoles',
         linkName: 'Assign Roles',
         icon: ' fa fa-home fa-2x '
     },
