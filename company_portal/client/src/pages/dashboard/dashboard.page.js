@@ -48,13 +48,19 @@ const Dashboard = ({ auth: { user }, logout }) => {
         }
     }, [user]);
 
+    var status = ''
+
+    if (user && user.role === 'none') {
+        status = 'Please await for a role to be assigned to you.';
+    }
+
     return (
         <>
             <div className='area'>
-                <p>
+                <h3 align='center'>
                     Welcome {user && user.name}, and thank you for being
-                    here. Your role is {user && user.role}
-                </p>
+                    here. {status}
+                </h3>
             </div>
             <nav className='main-menu'>
                 <ul>

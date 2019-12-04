@@ -6,6 +6,7 @@ import Portal from './pages/portal/portal-login.page';
 import Register from './pages/portal/portal-register.page';
 import Dashboard from './pages/dashboard/dashboard.page';
 import PrivateRoute from './components/routing/PrivateRoute';
+import AppDev from './pages/routes/AppDev';
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -39,6 +40,11 @@ function App() {
                         exact
                         path='/dashboard'
                         component={Dashboard}
+                    />
+                    <PrivateRoute
+                        exact
+                        path='/dashboard/:id'
+                        component={AppDev}
                     />
                     <Route path='/cat-employees' component={EmployeeSearch} />
                 </Router>
