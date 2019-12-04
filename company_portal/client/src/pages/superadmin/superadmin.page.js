@@ -6,15 +6,17 @@ import { Redirect } from 'react-router-dom';
 import '../dashboard/dashboard.style.scss';
 
 const SuperAdmin = ({
-    auth: {
-        user
-    },
+    auth: { user },
     logout
 }) => {
-    return user.role !== "none" ? (
+    if(!loading) {
+        
+    }
+    
+    return (
         <>
             <div>
-                <p>***********************HERE you are SuperAdmin!</p>
+                <p>***********************HERE you are SuperAdmin! { user && user.role }</p>
             </div>
             <nav className='main-menu'>
                 <ul>
@@ -84,8 +86,6 @@ const SuperAdmin = ({
                 </ul>
             </nav>
         </>
-    ) : (
-        <Redirect to='dashboard'/>
     )
 };
 

@@ -29,9 +29,11 @@ function App() {
                     <Route path='/sales' component={EmployeeSearch} />
                     <Route path='/HR' component={EmployeeSearch} />
                     <Route path='/eng' component={EmployeeSearch} />
-                    <Route path='/' component={Portal} />
+                    <Route exact path='/' component={Portal} />
                     <PrivateRoute exact path='/dashboard' component={Dashboard} />
-                    <PrivateRoute exact path='/superadmin' component={SuperAdmin}/>
+                    {/* <PrivateRoute exact path='/superadmin' component={SuperAdmin}/> */}
+                    <Route exact path='/superadmin' component={SuperAdmin}/>
+
                     <Route path='/cat-employees' component={EmployeeSearch} />
                 </Router>
             </>
