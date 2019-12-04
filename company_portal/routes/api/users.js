@@ -9,15 +9,15 @@ const User = require('../../models/User');
 // @route   GET api/users
 // @desc    Get all users
 // @access  Public
-router.get('/', async(req, res) => {
+router.get('/', async (req, res) => {
     try {
         const users = await User.find().select('-password');
         res.send(users);
     } catch (error) {
         console.error(err.message);
-        res.status(500).send('Server error')
+        res.status(500).send('Server error');
     }
-})
+});
 
 // @route   POST api/users
 // @desc    Register user
@@ -84,5 +84,43 @@ router.post(
         }
     }
 );
+
+// @route   UPDATE api/users
+// @desc    Update user role
+// @access  Private
+router.put('/:id', async (req, res) => {
+    const condition = { _id: req.params.id };
+    console.log('REQ: ', condition);
+
+    const { role } = req.body;
+    console.log('Body: ', role);
+
+    const user = await User.findById(req.params.id);
+    console.log('User: ', user.role);
+
+    if (role == user.role) {
+        return res.status(400).json({
+            errors: [{ msg: 'Cannot update role' }]
+        });
+    }
+    if (user) {
+        await User.findByIdAndUpdate(
+            req.params.id,
+            { role: role },
+            (err, obj) => {
+                if (err) {
+                    return res.status(400).json({
+                        errors: err
+                    });
+                }
+                return res.json(obj);
+            }
+        );
+    } else {
+        return res.status(400).json({
+            errors: [{ msg: 'User not found' }]
+        });
+    }
+});
 
 module.exports = router;

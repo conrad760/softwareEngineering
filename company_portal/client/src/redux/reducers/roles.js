@@ -1,6 +1,6 @@
 import {
     GLOBAL_ADMIN,
-    FINANCE_ADMIN,
+    FIN_ADMIN,
     SALES_ADMIN,
     HR_ADMIN,
     ENG_ADMIN
@@ -9,8 +9,8 @@ const roles = (state = [], actions) => {
     switch (actions.type) {
         case 'GLOBAL_ADMIN':
             return GLOBAL_ADMIN;
-        case 'FINANCE_ADMIN':
-            return FINANCE_ADMIN;
+        case 'FIN_ADMIN':
+            return FIN_ADMIN;
         case 'SALES_ADMIN':
             return SALES_ADMIN;
         case 'HR_ADMIN':
