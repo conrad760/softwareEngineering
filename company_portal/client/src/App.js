@@ -32,13 +32,13 @@ function App() {
                     <Route path='/' component={Portal} />
                     <PrivateRoute
                         exact
-                        path='/dashboard'
-                        component={Dashboard}
+                        path='/superadmin'
+                        component={SuperAdmin}
                     />
                     <PrivateRoute
                         exact
-                        path='/superadmin'
-                        component={SuperAdmin}
+                        path='/dashboard'
+                        component={Dashboard}
                     />
                     <Route path='/cat-employees' component={EmployeeSearch} />
                 </Router>

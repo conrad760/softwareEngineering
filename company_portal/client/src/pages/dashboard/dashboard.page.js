@@ -82,7 +82,7 @@ const Dashboard = ({ auth: { user }, logout }) => {
 
                 <ul className='logout'>
                     <li>
-                        <a onClick={logout} href='login'>
+                        <a onClick={logout} href='/'>
                             <i className='fa fa-power-off fa-2x'></i>
                             <span className='nav-text'>Logout</span>
                         </a>

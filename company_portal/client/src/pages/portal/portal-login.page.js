@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { login } from '../../redux/actions/auth'
 import './portal-login.style.scss';
 
-const Portal = ({ login, isAuthenticated }) => {
+const Portal = ({ login, isAuthenticated, user }) => {
     // useEffect(async() => {
     //     const result = await axios(
     //         '/api/users'
@@ -33,7 +33,12 @@ const Portal = ({ login, isAuthenticated }) => {
     };
 
     // Redirect if logged in
-    if (isAuthenticated) {
+    if (isAuthenticated && user) {
+        
+        if(user.role === 'super_admin'){
+            return <Redirect to='/superadmin' />;
+
+        }
         return <Redirect to='/dashboard' />;
     }
 
@@ -110,7 +115,8 @@ login.propTypes = {
 };
 
 const mapStateToProps = state => ({
-    isAuthenticated: state.auth.isAuthenticated
+    isAuthenticated: state.auth.isAuthenticated,
+    user: state.auth.user
 });
 
 export default connect(
