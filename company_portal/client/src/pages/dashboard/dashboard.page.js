@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-//import NavItem from '../../components/nav-bar/nav-item/nav-item.component'
-//import { BrowserRouter as Router, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logout } from '../../redux/actions/auth';
@@ -36,6 +34,7 @@ import {
 //     console.log(currentUser);
 
 const Dashboard = ({ auth: { user }, logout }) => {
+
     const [role, setRole] = useState([]);
     useEffect(() => {
         if (user) {
@@ -65,14 +64,15 @@ const Dashboard = ({ auth: { user }, logout }) => {
         <>
             <div className='area'>
                 <p>
-                      Welcome {user && user.name} ,and
-                    thank you for being here. Your role is {user && user.role}
+                    Welcome {user && user.name}, and thank you for being
+                    here. Your role is {user && user.role}
                 </p>
             </div>
             <nav className='main-menu'>
                 <ul>
                     {role.map(r => (
-                        <NavItem 
+                        <NavItem
+                            key={r.id}
                             link={r.link}
                             linkName={r.linkName}
                             icon={r.icon}
