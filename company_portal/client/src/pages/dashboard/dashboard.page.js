@@ -16,7 +16,7 @@ const Dashboard = () => (
                 </li>
                 <li className='has-subnav'>
                     <a href='www.google.com'>
-                        <i className='fa fa-laptop fa-2x'></i>
+                        <i className='fap fa-laptop fa-2x'></i>
                         <span className='nav-text'>Stars Components</span>
                     </a>
                 </li>
