@@ -37,7 +37,7 @@ class EmployeeSearch extends Component {
         return (
             <div className='App'>
                 <SearchBox
-                    placeholder='Search Monsters'
+                    placeholder='Search Cats'
                     onSearchChange={this.onSearchChange}
                 />
                 <CardList employees={filteredEmployees} />
